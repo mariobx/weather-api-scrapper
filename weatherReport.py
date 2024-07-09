@@ -4,7 +4,11 @@ import tkinter as tk
 from datetime import datetime
 
 
-apikey = "da62f95f9d22fc98094f931afd43d221"
+apikey = ""
+
+with open('.key.txt', 'r') as f:
+    apikey = f.read().strip()
+    f.close()
 
 baseUrl = "http://api.openweathermap.org/data/2.5/weather?"
 
